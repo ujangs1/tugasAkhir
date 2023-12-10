@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>MASKERKU</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A500"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway%3A600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600"/>
+  <link rel="stylesheet" href="css/cart.css"/>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="ipad-mini-83-1-eBw">
+  <div class="auto-group-tejh-Ccm">
+    <div class="group-8-6bf">
+      <a href="/home">
+        <div class="auto-group-p9v7-e7P">
+          <img class="arrow-mC1" src="./assets/arrow.png"/>
+          <p class="shopping-continue-UcD">Shopping Continue</p>
+        </div>
+      </a>
+    </div>
+    <div class="auto-group-y3mx-6tV">
+      <div class="auto-group-78ut-onu">
+        <p class="shopping-cart-iQ5">Shopping cart</p>
+      </div>
+      <% if (userItems.length > 0) { %>
+      <div class="group-12-hG1">
+        <div class="row">
+        <% userItems.forEach(item => { %>
+        <div class="group-9-46Z">
+          <% if (item.product_id == 1) { %>
+            <div class="rectangle-19-xSq"></div>
+          <% } else if (item.product_id == 2) { %>
+            <div class="rectangle-21-rkV"></div>
+          <% } %>
+          <div class="auto-group-c6uu-acd">
+            <% if (item.product_id == 1) { %>
+            <p class="italy-pizza-JYd">Earloop Mask&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <% } else if (item.product_id == 2) { %>
+              <p class="italy-pizza-JYd">Headloop Mask</p>
+            <% } %>
+          </div>
+          <p class="item-1-xdB"><%= item.quantity %></p>
+          <p class="item-681-ns7">Rp. <%= item.total %>.000,-</p>
+          <img class="trash-can-ghb" src="./assets/trash-can-jAD.png"/>
+        </div>
+        <% }); %>
+      </div>
+      </div>
+      <% } else { %>
+        <p class="shopping-cart-iQ5">Your cart is empty.</p>
+      <% } %>
+    </div>
+  </div>
+  <div class="group-7-2D3">
+    <p class="name-on-card-xMb">Name on card</p>
+    <p class="card-type-SnZ">Card type</p>
+    <p class="card-details-q41">Card Details</p>
+    <input class="auto-group-6asf-jv5" type="text"placeholder="Name"/>
+    <div class="auto-group-er7b-job">
+      <p class="expiration-date-GHj">Expiration date</p>
+      <p class="cvv-b57">CVV</p>
+    </div>
+    <div class="auto-group-rjnm-ifX">
+      <input class="auto-group-yqau-y5f" type="text"placeholder="mm/yy"/>
+      <input class="auto-group-6cxf-o4h" type="number"placeholder="123"/>
+    </div>
+    <p class="card-number-Rrm">Card Number</p>
+    <div class="auto-group-c8vh-j6m">
+      <p class="subtotal-37T">Subtotal</p>
+      <p class="item-1668-y17">$1,668</p>
+    </div>
+    <div class="auto-group-mg1k-gw7">
+      <p class="shipping-cpm">Shipping</p>
+      <p class="item-4-MGZ">$4</p>
+    </div>
+    <div class="auto-group-tnkf-5TT">
+      <p class="total-tax-incl-zqK">Total (Tax incl.)</p>
+      <p class="item-1672-Jr1">$1,672</p>
+    </div>
+    <input class="auto-group-avzd-ppM" type="number"placeholder="1111 2222 3333 4444"/>
+    <a href="/home">
+      <div class="auto-group-btyv-owB">
+        <p class="item-1672-UXX">$1,672</p>
+        <p class="checkout-n2R">Checkout</p>
+        <img class="right-JFf" src="./assets/right.png"/>
+      </div>
+    </a>
+    <div class="auto-group-qnrb-DNd">
+        <div class="rectangle-9-YQu"></div>
+        <div class="rectangle-10-2qs"></div>
+        <div class="rectangle-11-9Qh"></div>
+    </div>
+    <div class="line-1-UrH">
+    </div>
+  </div>
+</div>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
